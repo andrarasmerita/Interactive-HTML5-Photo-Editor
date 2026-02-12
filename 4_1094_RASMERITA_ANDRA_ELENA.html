@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Foto</title>
+    <link rel="stylesheet" href="4_1094_RASMERITA_ANDRA_ELENA.css">
+</head>
+<body>
+    <header>
+        <h1>Proiect Multimedia - Rasmerita Andra</h1>
+    </header>
+
+    <main class="container">
+        <section class="panou-canvas">
+            <div id="containerCanvas">
+                <canvas id="canvasPrincipal"></canvas>
+            </div>
+        </section>
+
+        <aside class="bara-laterala">
+            
+            <div class="sectiune-control">
+                <h3>Histograma RGB</h3>
+                <canvas id="canvasHisto" width="256" height="120"></canvas>
+                <p class="nota">Distributia culorilor in selectie</p>
+            </div>
+
+            <div class="sectiune-control">
+                <h3>Incarcare Imagine</h3>
+                <input type="file" id="inputFisier" accept="image/*">
+                <div id="zonaDrop" class="zona-drop">Trage imaginea aici</div>
+            </div>
+
+            <div class="sectiune-control">
+                <h3>Procesare Imagine</h3>
+                <div class="info-box">Selectie: Click + Drag. Mutare: Shift + Drag.</div>
+                
+                <label>Alege Filtru:</label>
+                <select id="selectEfect">
+                    <option value="nimic">Fara efect</option>
+                    <option value="albnegru">Alb-Negru</option>
+                    <option value="invers">Inversare Culori</option>
+                    <option value="sepia">Sepia</option>
+                    <option value="luminozitate">Luminozitate</option>
+                </select>
+                <button id="btnAplica">Aplica Efect pe Selectie</button>
+
+                <div class="rand-butoane">
+                    <button id="btnTaiere">Crop</button>
+                    <button id="btnStergere" class="danger">Sterge Selectia</button>
+                </div>
+            </div>
+
+            <div class="sectiune-control">
+                <h3>Redimensionare</h3>
+                <div class="rand-butoane">
+                    <input type="number" id="inputLatime" placeholder="Latime">
+                    <input type="number" id="inputInaltime" placeholder="Inaltime">
+                </div>
+                <button id="btnScalare">Redimensioneaza</button>
+            </div>
+
+            <div class="sectiune-control">
+                <h3>Adaugare Text</h3>
+                <input type="text" id="inputText" placeholder="Scrie textul...">
+                <div class="rand-butoane">
+                    <input type="number" id="pozitieX" placeholder="X" value="50">
+                    <input type="number" id="pozitieY" placeholder="Y" value="50">
+                    <input type="color" id="culoareText" value="#ff0000">
+                </div>
+                <input type="number" id="marimeText" value="30" placeholder="Marime px">
+                <button id="btnText">Insereaza Text</button>
+            </div>
+
+            <div class="sectiune-control final">
+                <button id="btnSalvare" class="success">Salveaza Imaginea</button>
+                <button id="btnReset" class="secondary">Reseteaza Tot</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="4_1094_RASMERITA_ANDRA_ELENA.js"></script>
+</body>
+</html>

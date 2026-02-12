@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e1e; 
+    color: #ccc;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #252526;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Layout principal cu Flexbox */
+.container {
+    display: flex;
+    flex: 1; 
+    overflow: hidden; 
+}
+
+
+.panou-canvas {
+    flex: 1;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    position: relative;
+}
+
+canvas {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-image: linear-gradient(45deg, #222 25%, transparent 25%), 
+                      linear-gradient(-45deg, #222 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #222 75%), 
+                      linear-gradient(-45deg, transparent 75%, #222 75%);
+    background-size: 20px 20px;
+}
+
+
+.bara-laterala {
+    width: 320px;
+    background-color: #252526;
+    border-left: 1px solid #333;
+    padding: 20px;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectiune-control {
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: white;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007acc;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover { background-color: #005a9e; }
+button.danger { background-color: #d32f2f; }
+button.success { background-color: #388e3c; padding: 12px; }
+button.secondary { background-color: #555; }
+
+.rand-butoane {
+    display: flex;
+    gap: 5px;
+}
+
+.zona-drop {
+    border: 2px dashed #555;
+    padding: 20px;
+    text-align: center;
+    background: #2a2a2a;
+    font-size: 12px;
+    cursor: pointer;
+}
+.zona-drop.activ { border-color: #007acc; color: #007acc; }
+
+#canvasHisto {
+    background: #000;
+    width: 100%;
+    border: 1px solid #444;
+}
+
+.nota { font-size: 11px; color: #888; margin-top: 5px; }
+.info-box {
+    background: #2d2d30;
+    border-left: 3px solid #007acc;
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
