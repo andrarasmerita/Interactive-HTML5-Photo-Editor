@@ -1,4 +1,4 @@
-# Interactive-HTML5-Photo-Editor
+# Features
 
 # Image Upload & Export
 Users can upload images via drag-and-drop or file input control and download the final edited result.
